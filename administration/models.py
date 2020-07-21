@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 from django.db import models
@@ -15,6 +16,9 @@ class Signature(models.Model):
 
     def __str__(self):
         return self.name
+=======
+from django.db import models
+>>>>>>> cace4ef603f736cb91b5c4492ec17cd4c8939b7b
 
 
 class Phone(models.Model):
@@ -58,7 +62,11 @@ class Person(models.Model):
 
 
 class Responsable(Person):
+<<<<<<< HEAD
     bank_account = models.CharField(max_length=50, unique=True)
+=======
+    bank_account_number = models.CharField(max_length=50, unique=True)
+>>>>>>> cace4ef603f736cb91b5c4492ec17cd4c8939b7b
 
 
 class Student(Person):
@@ -83,6 +91,7 @@ class StudentResponsable(models.Model):
     relationship = models.CharField(max_length=10, choices=RELATIONSHIP_CHOICE, blank=True, null=True)
 
 
+<<<<<<< HEAD
 class Teacher(Person):
     aviable_signature = models.ManyToManyField(Signature, related_name='signatures')
     bank_account = models.CharField(max_length=50, unique=True)
@@ -138,4 +147,22 @@ class ServiceClass(models.Model):
         return self.start_date < date_now < self.finish_date
 
     
+=======
+class Signature(models.Model):
+    LEVEL_CHOICE = [
+        ('B', 'Bachiller'),
+        ('S', 'University'),        
+    ]
+
+    name = models.CharField(max_length=20)
+    level = models.CharField(max_length=20, choices=LEVEL_CHOICE)
+
+
+class Teacher(Person):
+    signature = models.ManyToManyField(Signature, related_name='signatures')
+
+
+
+
+>>>>>>> cace4ef603f736cb91b5c4492ec17cd4c8939b7b
 

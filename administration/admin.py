@@ -1,4 +1,5 @@
 from django.contrib import admin
+<<<<<<< HEAD
 from .models import *
 
 admin.site.register(Signature)
@@ -14,3 +15,7 @@ admin.site.register(ServiceType)
 admin.site.register(ServiceSignature)
 admin.site.register(ServiceClass)
 
+=======
+
+# Register your models here.
+>>>>>>> cace4ef603f736cb91b5c4492ec17cd4c8939b7b

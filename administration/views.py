@@ -1,4 +1,5 @@
 from django.shortcuts import render
+<<<<<<< HEAD
 from rest_framework import viewsets, generics
 from .models import *
 from .serializers import *
@@ -39,3 +40,7 @@ class ServiceClassViewSet(viewsets.ModelViewSet):
     queryset = ServiceClass.objects.all()
 
 
+=======
+
+# Create your views here.
+>>>>>>> cace4ef603f736cb91b5c4492ec17cd4c8939b7b
